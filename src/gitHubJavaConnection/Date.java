@@ -159,6 +159,12 @@ public class Date {
 	
 	
 	
-	
+	public String wisokosna() {
+		if(year%4==0) {
+			return "Wisokosna";
+		}else {
+			return "Ne wisokosna";
+		}
+	}
 
 }
