@@ -73,7 +73,87 @@ public class Date {
 	
 	
 	
-	
+	public int compareToYear(Date anotherDate) {
+		
+		if(year > anotherDate.year) {
+			return 1;
+		}else if(year < anotherDate.year ) {
+			return -1;
+		}else {
+			return compareToMonth(anotherDate);
+		}
+		
+		
+	}
+
+	private int compareToMonth(Date anotherDate) {
+		// TODO Auto-generated method stub
+		
+		if(month > anotherDate.month) {
+			return 1;
+		}else if(month < anotherDate.month) {
+			return -1;
+		}else {
+			return compareToDay(anotherDate);
+		}
+		
+		
+	}
+
+	private int compareToDay(Date anotherDate) {
+		// TODO Auto-generated method stub
+		if(day > anotherDate.day) {
+			return 1;
+		}else if(day < anotherDate.day) {
+			return -1;
+		}else {
+			return compareToHour(anotherDate);
+		}
+		
+		
+	}
+
+	private int compareToHour(Date anotherDate) {
+		// TODO Auto-generated method stub
+		
+		if(hour > anotherDate.hour) {
+			return 1;
+		}else if(hour < anotherDate.hour) {
+			return -1;
+		}else {
+			return compareToMin(anotherDate);
+		}
+		
+		
+	}
+
+	private int compareToMin(Date anotherDate) {
+		// TODO Auto-generated method stub
+		
+		if(min > anotherDate.min) {
+			return 1;
+		}else if(min < anotherDate.min) {
+			return -1;
+		}else {
+			return compareToSec(anotherDate);
+		}
+		
+		
+	}
+
+	private int compareToSec(Date anotherDate) {
+		// TODO Auto-generated method stub
+		
+		if(sec > anotherDate.sec) {
+			return 1;
+		}else if(sec < anotherDate.sec) {
+			return -1;
+		}else {
+			return 0;
+		}
+		
+		
+	}
 	
 	
 	
