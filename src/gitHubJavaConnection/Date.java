@@ -70,9 +70,30 @@ public class Date {
 		year = _Year;
 	}
 	
+	//за когато потрбителя го мързи
+	public Date() {
+		sec = 30;
+		min = 50;
+		hour = 12;
+		day = 20;
+		month = 12;
+		year = 1969;
+	}
 	
 	
 	
+	
+	//това се появи когато натиснах десен бутон Source-> generate construktor
+	public Date(int sec, int min, int hour, int day, int month, int year) {
+		super();
+		this.sec = sec;
+		this.min = min;
+		this.hour = hour;
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+
 	public int compareToYear(Date anotherDate) {
 		
 		if(year > anotherDate.year) {
@@ -130,6 +151,7 @@ public class Date {
 	private int compareToMin(Date anotherDate) {
 		// TODO Auto-generated method stub
 		
+		
 		if(min > anotherDate.min) {
 			return 1;
 		}else if(min < anotherDate.min) {
@@ -166,5 +188,46 @@ public class Date {
 			return "Ne wisokosna";
 		}
 	}
+	
+	
+	public int curDay() {
+		
+		int numDay = 31;
+		
+		if(month == 1) {
+			return day;
+		}else {
+			if(wisokosna() == "Wisokosna") {
+				for(int i = 1; i< this.month; i++) {
+						if(i==2) {
+							numDay+=29;
+						}else if(i%2==0) {
+							numDay+=30;
+						}else {
+							numDay+=31;
+						}	
+						
+					}
+				return numDay+day;
+					
+			}else {
+				for(int i = 1; i< this.month; i++) {
+					
+						if(i==2) {
+							numDay+=28;
+						}else if(i%2==0) {
+							numDay+=30;
+						}else {
+							numDay+=31;
+						}
+				}
+				return numDay+day;
+			}
+			
+		}
+		
+		
+	}
+	
 
 }
