@@ -25,9 +25,11 @@ public class Main {
 		
 		System.out.print(d.compareToYear(d1));
 		
-		System.out.print(d.wisokosna());
+		System.out.println(d.wisokosna());
 		
 		System.out.println(d.curDay());
+		
+		System.out.println(d.curWeek());
 
 	}
 	

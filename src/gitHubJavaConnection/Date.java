@@ -192,13 +192,13 @@ public class Date {
 	
 	public int curDay() {
 		
-		int numDay = 31;
+		int numDay = 0;
 		
 		if(month == 1) {
 			return day;
 		}else {
 			if(wisokosna() == "Wisokosna") {
-				for(int i = 1; i< this.month; i++) {
+				for(int i = 1; i<= this.month; i++) {
 						if(i==2) {
 							numDay+=29;
 						}else if(i%2==0) {
@@ -228,6 +228,19 @@ public class Date {
 		
 		
 	}
+	
+	
+	public int curWeek() {
+		int a = curDay();
+		int d = a/7;
+		if(a%7==0) {
+			return d;
+		}else {
+			return d+1;
+		}
+		
+	}
+	
 	
 
 }
