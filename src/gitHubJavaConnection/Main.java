@@ -10,8 +10,8 @@ public class Main {
 		d.month = 2;
 		d.day = 20;
 		d.hour = 16;
-		d.min = 14;
-		d.sec = 30;
+		d.minutes = 14;
+		d.seconds = 30;
 		
 		
 		Date d1 = new Date();
@@ -19,17 +19,17 @@ public class Main {
 		d1.month = 11;
 		d1.day = 20;
 		d1.hour = 16;
-		d1.min = 14;
-		d1.sec = 30;
+		d1.minutes = 14;
+		d1.seconds = 30;
 		
 		
 		System.out.print(d.compareToYear(d1));
 		
-		System.out.println(d.wisokosna());
+		System.out.println(d.leapYear());
 		
-		System.out.println(d.curDay());
+		System.out.println(d.currentDay());
 		
-		System.out.println(d.curWeek());
+		System.out.println(d.currentWeek());
 
 	}
 	
