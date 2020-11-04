@@ -276,6 +276,10 @@ public class Date {
 			return DaysOfWeek.getDay((7-(-daysToMonday)%7));
 	}
 	
+	public String toString()
+	{
+		return Integer.toString(day) + "." + Integer.toString(month) + "." + Integer.toString(year) + "г.";
+	}
 	
 	private static Date someMonday = new Date(0, 0, 0, 2, 11, 2020);
 

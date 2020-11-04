@@ -14,6 +14,7 @@ public class Main {
 		d.seconds = 30;
 		
 		
+		
 		Date d1 = new Date();
 		d1.year = 2000;
 		d1.month = 11;
@@ -30,6 +31,8 @@ public class Main {
 		System.out.println(d.currentDay());
 		
 		System.out.println(d.currentWeek());
+		
+		
 
 	}
 	
